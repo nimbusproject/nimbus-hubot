@@ -4,5 +4,5 @@ module.exports = (robot) ->
   robot.hear /peer\s(.*)/i, (msg) ->
     if msg.match[1].toLowerCase() == "hubot"
       msg.send "whatever"
-    else
-      msg.send msg.match[0]
+  robot.respond /back me up/i, (msg) ->
+    msg.send "peer"
