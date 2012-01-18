@@ -1,5 +1,5 @@
 # Hubot waves back
 #
 module.exports = (robot) ->
-  robot.respond /wave hubot/i, (msg) ->
+  robot.hear /wave/i, (msg) ->
     msg.send "wave"
