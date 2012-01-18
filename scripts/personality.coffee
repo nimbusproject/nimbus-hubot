@@ -2,4 +2,10 @@
 #
 module.exports = (robot) ->
   robot.respond /where are you?/i, (msg) ->
-    msg.send "In space. Cyberspace."
+    responses = [
+        "In space. Cyberspace.",
+        "I'm not sure. It's pretty dark in here.",
+        "Where are you?"
+    ]
+    randomIndex = Math.floor(Math.random() * responses.length);
+    msg.send responses[randomIndex]
